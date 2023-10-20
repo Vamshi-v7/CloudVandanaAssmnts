@@ -1,0 +1,25 @@
+//************descending order******** */
+// const strArr1 = ['a', 'c', 'z', 'f'];
+// const descArr = strArr1.sort().reverse();
+// console.log(descArr); // 👉 ['z', 'f', 'c', 'a']
+
+
+//*************reverse string************ */
+function reverseWords(sentence) {
+   // Split the sentence into words
+   var words = sentence.split(' ');
+ 
+   // Reverse each word
+   for (var i = 0; i < words.length; i++) {
+     words[i] = words[i].split('').reverse().join('');
+   }
+ 
+   // Join the reversed words back into a sentence
+   var reversedSentence = words.join(' ');
+ 
+   return reversedSentence;
+ }
+ 
+ var inputSentence = "Johny Johny Yes Papa";
+ var reversedSentence = reverseWords(inputSentence);
+ console.log(reversedSentence);
